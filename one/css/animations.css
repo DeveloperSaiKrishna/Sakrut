@@ -1,0 +1,56 @@
+
+/* Animate In Left */
+.animate_fade.Inleft{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s ease-in-out;
+}
+.animate_fade.Inleft.active{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animate In Right */
+.animate_fade.Inright{
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 1s ease-in-out;
+}
+.animate_fade.Inright.active{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animate In Up */
+.animate_fade.Inup{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease-in-out;
+    position: relative;
+}
+/* .animate_fade.Inup.active::-webkit-scrollbar{
+    display: none;
+}
+.animate_fade.Inup.active{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} */
+.animate_fade.Inup.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate_delay{
+    animation: animate-delay 1s ease-in-out;
+}
+
+@keyframes animate-delay{
+    0%{ 
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{ 
+        opacity: 1; 
+        transform: translateX(0px);
+    }
+}

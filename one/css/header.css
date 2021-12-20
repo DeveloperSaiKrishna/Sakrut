@@ -1,0 +1,167 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{    
+    overflow-x: hidden;
+}
+
+
+@media(min-width: 801px){
+    header{    
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    header.scrolled{
+        box-shadow: 1px 1px 10px #00000030;
+    }
+    header .inner-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+        transition: 0.5s ease-in-out;
+    }
+    header .inner-header.scrolled{
+        padding: 0px 100px;
+        background: white;
+    }
+    header .inner-header .logo-div h1{
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+    
+    header .inner-header.scrolled .logo-div h1{
+        color: #ffb300;
+    }
+    header .inner-header .logo-div h1 span{
+        color: #f8721f;
+    }
+    
+    header nav ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+    
+    header nav ul a.link{
+        display: block;
+        padding: 20px 30px;
+        color: white;
+        text-decoration: none;
+        transition: 0.5s ease-in-out;
+    }
+    
+    header .inner-header.scrolled nav ul a.link{
+        color: tomato;
+    }
+    
+    header nav ul a.link:hover{
+        background: tomato;
+    }
+    
+    header .inner-header.scrolled nav ul a.link:hover{
+        background: tomato;
+        color: white;
+    }
+    
+    .menu-icon{
+        display: none;
+    }
+    header .inner-header nav ul{
+        max-height: 100%;
+    }
+}
+
+@media(max-width: 800px){
+    header{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        width: 100%;
+    }
+    header.scrolled{
+        box-shadow: 1px 1px 10px #00000030;
+    }
+    header .inner-header .logo-div h1{
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+    header .inner-header .logo-div h1 span{
+        color: #f8721f;
+    }
+    header .inner-header.scrolled .logo-div h1 {
+        color: #ffb300;
+    }
+    .menu-icon{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .menu-icon .bar{
+        width: 20px;
+        height: 2px;
+        background: white;
+        margin: 2px;
+        transition: 0.5s ease-in-out;
+    }
+    header .logo-div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+        transition: 1s ease-in-out;
+    }
+    header.scrolled .logo-div{
+        padding: 10px 20px;
+    }
+    header.scrolled .menu-icon .bar{
+        background: #ffb300;
+    }
+    header .inner-header {
+        display: flex;
+        flex-direction: column;
+        transition: 1s ease-in-out;
+    }
+    header .inner-header.scrolled{
+        background: white;
+    }
+    
+    header .inner-header nav ul{
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    header .inner-header nav ul.show{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        /* padding: 10px 0; */
+        background: white;
+    }
+    header .inner-header nav ul li a.link{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        text-decoration: none;
+        color: #ffb300;
+    }  
+
+    /* Hide Scrollbar for Chrome & Opera */
+    header .inner-header nav ul li::-webkit-scrollbar{
+        display: none; 
+    }
+    header .inner-header nav ul li{
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+}
